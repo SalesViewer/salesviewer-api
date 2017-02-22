@@ -1,1 +1,5 @@
 theme: jekyll-theme-minimal
+title: SalesViewer API
+description: Developer information about the SalesViewer API
+include:
+    - _pages
