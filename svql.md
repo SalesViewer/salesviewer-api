@@ -22,29 +22,29 @@ We had to enhance RQL a bit to support
 * [persvr README](https://github.com/persvr/rql){:target="_blank"}
 
 ### Features supported by SVQL
-- [X] `in (<field>,<array-of-values>)` and `out (<field>,<array-of-values>)` (`in(session.company.zip, (76255, 70176))`)
-- [X] `limit (<start>,<number>)` (_Note: SalesViewer remains page-based - the offset is recalculated to the real page number internally_)
-- [X] `sort (<list of fields with + or - prefix>)` 
-- [X] `like (<field>, <pattern>)` 
-- [X] `and (<query>,<query>,...)`
-- [X] `or (<query>,<query>,...)`
-- [X] `not (<query>)`
-- [X] `eq (<field>,<value>)`
-- [X] `ne (<field>,<value>)`
-- [X] `gt (<field>,<value>)`
-- [X] `ge (<field>,<value>)`
-- [X] `lt (<field>,<value>)`
-- [X] `le (<field>,<value>)`
+- [x] `in (<field>,<array-of-values>)` and `out (<field>,<array-of-values>)` (`in(session.company.zip, (76255, 70176))`)
+- [x] `limit (<start>,<number>)` (_Note: SalesViewer remains page-based - the offset is recalculated to the real page number internally_)
+- [x] `sort (<list of fields with + or - prefix>)` 
+- [x] `like (<field>, <pattern>)` 
+- [x] `and (<query>,<query>,...)`
+- [x] `or (<query>,<query>,...)`
+- [x] `not (<query>)`
+- [x] `eq (<field>,<value>)`
+- [x] `ne (<field>,<value>)`
+- [x] `gt (<field>,<value>)`
+- [x] `ge (<field>,<value>)`
+- [x] `lt (<field>,<value>)`
+- [x] `le (<field>,<value>)`
 
 ### Feature enhancements
-- [X] we made the language whitespace ignoring!
+- [x] we made the language whitespace ignoring!
 - [ ] `sort (<condition subquery, aggregate or conditional aggregate>)` 
-- [X] `count(<field>, <conditional aggregate>) > 0` (like: `count(me.friends.name LIKE 'robin')`)
+- [x] `count(<field>, <conditional aggregate>) > 0` (like: `count(me.friends.name LIKE 'robin')`)
 - [ ] `exists(<field>, <condition>` or `any(<field>, <condition>)` as alias for `count(<field>, <...>) > 0`
-- [X] `like (<field>, <aggregate or conditional aggregate>)`[^2]
-- [X] `null()` changed to `null` (_because of quoted strings_)
-- [X] `true()` changed to `true` (_because of quoted strings_)
-- [X] `false()` changed to `false` (_because of quoted strings_)
+- [x] `like (<field>, <aggregate or conditional aggregate>)`[^2]
+- [x] `null()` changed to `null` (_because of quoted strings_)
+- [x] `true()` changed to `true` (_because of quoted strings_)
+- [x] `false()` changed to `false` (_because of quoted strings_)
 - [ ] we want to provide a visual query builder (_work in progress_)
 
 ### Features ignored
@@ -64,8 +64,8 @@ We had to enhance RQL a bit to support
 * [Apache CXF FIQL reference](http://cxf.apache.org/docs/jax-rs-search.html#JAX-RSSearch-AdvancedSearchQueries)
 
 ### supported by SVQL
-- [X] Comparison: `=`, `==`, `!=`, `=lt=`, `=le=`, `=gt=`, `=ge=`
-- [X] Logical: `;`, `,` replaced by `&` and `|` (_which is more intuitve and compatible with RQL_)
+- [x] Comparison: `=`, `==`, `!=`, `=lt=`, `=le=`, `=gt=`, `=ge=`
+- [x] Logical: `;`, `,` replaced by `&` and `|` (_which is more intuitve and compatible with RQL_)
 
 
 
