@@ -72,10 +72,3 @@ We had to enhance RQL a bit to support
 ## Footnotes
 [^1]: There's no real use-case for this. We won't support dynamic object creation or partial retrieving the data.
 [^2]: Extension to the standard
-
-
-*[RQL]: Resource Query Language
-*[SVQL]: SalesViewer Query Language
-*[FIQL]: Feed Item Query Language
-*[IETF]: Internet Engineering Task Force
-*[API]: Application Programming Interface
