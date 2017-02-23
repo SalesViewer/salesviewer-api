@@ -686,16 +686,6 @@
           "description":"City of company",
           "type":"string"
         },
-        "latitude":{
-          "description":"Geographical latitude of company's address",
-          "type":"number",
-          "format":"double"
-        },
-        "longitude":{
-          "description":"Geographical longitude of company's address",
-          "type":"number",
-          "format":"double"
-        },
         "url":{
           "description":"URL of company's website",
           "type":"string"
