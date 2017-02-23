@@ -1,0 +1,19 @@
+{
+    "title": "ErrorResponse",
+    "type": "object",
+    "description": "generic error response structure",
+    "properties": {
+        "error": {
+            "description": "Indicated that it' an error",
+            "type": "boolean"
+        },
+        "errorDescription": {
+            "description": "Error description",
+            "type": "string"
+        },
+        "errorType": {
+            "description": "Error type",
+            "type": "string"
+        }
+    }
+}

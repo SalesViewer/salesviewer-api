@@ -1,0 +1,182 @@
+// brought from the mixins.less part of the bootstrap library:
+
+.navbar-default .navbar-nav &>li &>a:hover,.navbar-default .navbar-nav &>li &>a:focus {
+    color: #333;
+    background-color: #fff;
+    z-index:50000;
+}
+.jumbotron {
+    margin-bottom:0px;
+}
+.jumbotron.hero {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; 
+    position:relative;
+    h1 {
+        position:absolute;
+        bottom:0;
+    }
+}
+html,body {
+    min-height: 100%;
+    height: 100%;
+}
+
+container-fluid {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+// #toc.nav {
+//     li {
+//         margin-left: 100px;
+//     }
+// }
+.nav-list  li, .nav-list .nav-header {
+    padding-right:10px;
+}
+// .tocify.nav {
+//     ul {
+//         margin-left:10px;
+//     }
+// }
+.invert {
+    background-color: #2b2b2b;
+    color: #ddd;
+    padding-top: 5px;
+}
+* {
+    margin: 0;
+}
+
+@media screen and (min-width:1px) {
+    .jumbotron.hero {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        background-color:#529abb;
+        min-height:30%;
+        height:auto;
+    }
+    .navbar{#nav_bar_opts.navbar;
+    }
+    .navbar-default .navbar-nav>li>a{
+        #nav_bar_opts.navbar_base;
+        #nav_bar_opts.background_1;
+        &:hover, &:focus,&:active{#nav_bar_opts.navbar_1_a_color}
+    }
+}
+
+@media screen and (min-width:768px) {
+    .jumbotron.hero {
+    min-height:100%;
+    height:100%;
+    background-color:#529abb;}
+.navbar{#nav_bar_opts.navbar;}
+.navbar-default .navbar-nav>li>a{#nav_bar_opts.navbar_base;#nav_bar_opts.background_768; }
+}
+
+#nav_bar_opts(){
+    .background_1{;background-color:#F8F8F8}
+    .background_768{background-color:#F8F8F8;color:auto;}
+    .navbar_base{z-index:100000;z-index:100000}
+    .navbar {margin-bottom:0px;}
+    .navbar_1_a_color{ background-color:#333;color:#f3f3f3;}
+    .drop-down{
+        .active{color:#333;background-color:#e7e7e7;}
+           .hover{background-color:#333;color:#f3f3f3}
+
+    }
+}
+#affixer{
+    .container{margin-left:16px;}
+
+    &.affix-top {
+        z-index:100000;
+        height: 0px;
+    }
+    &.affix {
+        top: 0;
+        width: 100%;
+        z-index:100000;
+        height:auto;
+    }
+}
+
+.wrapper {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin-bottom:-100px;
+    
+}
+
+.push{
+  height:100px;
+    }
+.footer{
+    bottom:0px;
+    &:extend(.push);
+}
+
+
+#my-dropdown(){
+    .my-dropdown{
+      z-index: 100000;
+      background-color: rgb(248, 248, 248);
+        .dropdown-link a{padding-left:15px;
+            margin-right:-10px;
+            &:hover{#nav_bar_opts.drop-down.hover;}
+            }
+        li{
+            background-color: rgb(248, 248, 248);
+            a{ z-index: 100000;
+                background-color: rgb(248, 248, 248);
+                background-size: auto;
+                box-sizing: border-box;
+                color: rgb(119, 119, 119);
+                display: block;
+                font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+                font-size: 14px;
+                text-decoration:none;
+                &:active{#nav_bar_opts>.drop-down.active;}
+                &:hover{background-color:#333;color:#f3f3f3;}
+                &.active{#nav_bar_opts>.drop-down.active;}
+            } 
+        }
+    }
+}
+
+.my-dropdown-row{
+    z-index: 100000;
+    background-color: rgb(248, 248, 248);
+    #my-dropdown();
+}
+#toc{
+    li.active a{#nav_bar_opts>.drop-down.active;}
+    #my-dropdown.my-dropdown;
+li+ul{margin-left:10px;
+    }
+}
+
+
+div.navbar.yamm.navbar-default{z-index:10000;}
+
+.center-block{
+    & table, &+img{margin:0 auto; float:none;}
+&+img, &+.highlight+p img{margin:0 auto; float:none;display:block;}
+}
+
+div.panel-body {
+    & *>img{.makecenter()}
+}
+
+// colors
+@navblack: #333;
+@navbackground: #f8f8f8;
+
+//mixins
+.makecenter(@margin:0 auto;@float:none;@display:block){
+    margin:@margin;
+    float:@float;
+    display:@display;
+};

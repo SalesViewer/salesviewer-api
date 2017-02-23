@@ -1,0 +1,21 @@
+{
+    "title": "CompanyQuery",
+    "type": "object",
+    "description": "queryable company object",
+    "properties": {
+        "website": {
+            "$ref": "#\/definitions\/Url"
+        },
+        "url": {
+            "$ref": "#\/definitions\/Url"
+        },
+        "sector": {
+            "$ref": "#\/definitions\/CompanySectorQuery"
+        }
+    },
+    "allOf": [
+        {
+            "$ref": "#\/definitions\/Company"
+        }
+    ]
+}

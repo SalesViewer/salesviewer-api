@@ -1,0 +1,15 @@
+{
+    "title": "CompanyPublic",
+    "type": "object",
+    "description": "public company object",
+    "properties": {
+        "sector": {
+            "$ref": "#\/definitions\/CompanySectorPublic"
+        }
+    },
+    "allOf": [
+        {
+            "$ref": "#\/definitions\/Company"
+        }
+    ]
+}

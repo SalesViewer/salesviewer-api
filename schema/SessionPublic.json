@@ -1,0 +1,44 @@
+{
+    "title": "Session",
+    "type": "object",
+    "description": "public session object",
+    "properties": {
+        "startedAt_ts_server": {
+            "description": "Session started at UNIX-Time",
+            "type": "string",
+            "format": "date-time"
+        },
+        "lastActivityAt_ts_server": {
+            "description": "Session last activity at UNIX-Time",
+            "type": "string",
+            "format": "date-time"
+        },
+        "duration_secs": {
+            "description": "Duration of session in seconds",
+            "type": "integer",
+            "format": "int64"
+        },
+        "company": {
+            "$ref": "#\/definitions\/CompanyPublic"
+        },
+        "visits": {
+            "description": "Session visits of this session. \nNOTE: if `includeVisits`-parameter set to `false`, result won't contain visits field.\n",
+            "type": "array",
+            "items": {
+                "$ref": "#\/definitions\/SessionVisitPublic"
+            }
+        },
+        "interests": {
+            "description": "interests triggered by one or more visits in this session\n",
+            "type": "array",
+            "items": {
+                "$ref": "#\/definitions\/SessionInterestPublic"
+            }
+        }
+    },
+    "required": [
+        "startedAt_ts_server",
+        "lastActivityAt_ts_server",
+        "duration_secs"
+    ]
+}

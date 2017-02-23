@@ -1,0 +1,25 @@
+{
+    "title": "GetSessionsResponse",
+    "type": "object",
+    "description": "response structure of any `\/session.json` query",
+    "properties": {
+        "totals": {
+            "$ref": "#\/definitions\/GetSessionsResultTotals"
+        },
+        "result": {
+            "description": "Array of `SessionPublic` (query results)",
+            "type": "array",
+            "items": {
+                "$ref": "#\/definitions\/SessionPublic"
+            }
+        }
+    },
+    "required": [
+        "totals"
+    ],
+    "allOf": [
+        {
+            "$ref": "#\/definitions\/PaginatedResult"
+        }
+    ]
+}

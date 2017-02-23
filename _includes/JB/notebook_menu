@@ -1,0 +1,30 @@
+
+
+{% for cat in site.category-list %}
+<ul class="col-sm-2 list-unstyled my-dropdown">
+<li class="dropdown-heading  ">{{ cat }}</li>
+
+{% for node in site.pages %}
+{% if node.subject contains 'data' %} 
+
+{% if node.categories contains cat %}
+{% if page.url == node.url %}
+
+<li class="dropdown-link active">
+  <a href="{{ BASE_PATH }}{{node.url}}" class="active">
+  {{node.title}}
+  </a>
+</li>
+
+{% else %}
+<li class="dropdown-link">
+  <a href="{{ BASE_PATH }}{{node.url}}">
+  {{node.title}}
+  </a>
+</li>
+{% endif %}
+{% endif %}
+{% endif %}
+{% endfor %}
+</ul>
+{% endfor %}

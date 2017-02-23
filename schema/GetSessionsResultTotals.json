@@ -1,0 +1,39 @@
+{
+    "type": "object",
+    "title": "GetSessionsResultTotals",
+    "description": "some metadata information of object counts",
+    "properties": {
+        "sessions": {
+            "description": "Total number of unique sessions",
+            "type": "integer",
+            "format": "int64"
+        },
+        "companies": {
+            "description": "Total number of unique companies",
+            "type": "integer",
+            "format": "int64"
+        },
+        "visits": {
+            "description": "Total number of page visits",
+            "type": "integer",
+            "format": "int64"
+        },
+        "interest_visits": {
+            "description": "Total number of page visits which triggered interest",
+            "type": "integer",
+            "format": "int64"
+        },
+        "interests": {
+            "description": "Total number of interests triggered",
+            "type": "integer",
+            "format": "int64"
+        }
+    },
+    "required": [
+        "sessions",
+        "companies",
+        "visits",
+        "interest_visits",
+        "interests"
+    ]
+}

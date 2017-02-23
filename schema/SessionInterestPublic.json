@@ -1,0 +1,10 @@
+{
+    "title": "SessionInterestPublic",
+    "type": "object",
+    "description": "querably session interest object",
+    "allOf": [
+        {
+            "$ref": "#\/definitions\/SessionInterest"
+        }
+    ]
+}

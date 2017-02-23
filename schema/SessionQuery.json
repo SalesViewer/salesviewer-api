@@ -1,0 +1,42 @@
+{
+    "type": "object",
+    "title": "Session",
+    "description": "queryable session object",
+    "properties": {
+        "date": {
+            "description": "alias of `started_at`",
+            "type": "string",
+            "format": "date-time"
+        },
+        "locale": {
+            "description": "alias of `language`",
+            "type": "string"
+        },
+        "userAgent": {
+            "description": "clients user agent string",
+            "type": "string"
+        },
+        "company": {
+            "$ref": "#\/definitions\/CompanyQuery"
+        },
+        "visits": {
+            "description": "Session visits of this session. \nNOTE: if `includeVisits`-parameter set to `false`, result won't contain visits field.\n",
+            "type": "array",
+            "items": {
+                "$ref": "#\/definitions\/SessionVisitQuery"
+            }
+        },
+        "interests": {
+            "description": "interests triggered by one or more visits in this session\n",
+            "type": "array",
+            "items": {
+                "$ref": "#\/definitions\/SessionInterestQuery"
+            }
+        }
+    },
+    "allOf": [
+        {
+            "$ref": "#\/definitions\/Session"
+        }
+    ]
+}

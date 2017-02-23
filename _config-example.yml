@@ -1,0 +1,70 @@
+#DO NOT MODIFY THIS FILE DIRECTLY MODIFY _base_config.yml instead
+
+permalink: /:categories/:year/:month/:day/:title
+local_base_path: http://localhost:4000
+deploy_base_path: http://www.**REMOVED**
+exclude:
+- .rvmrc
+- .rbenv-version
+- README.md
+- Rakefile
+- changelog.md
+pygments: true
+markdown: redcarpet-pygments
+redcarpet:
+  extensions:
+  - with_toc_data
+  - HTML_TOC
+category-list:
+- scripts
+- analysis
+- datasets
+- construction
+- notes
+title: 
+tagline: 
+author:
+  name: 
+  email:
+  github:
+  twitter: username
+  feedburner: feedname
+production_url: http://www.**REMOVED**
+JB:
+  version: 0.3.0
+  BASE_PATH: http://www.**REMOVED**
+  baseurl: http://**REMOVED**
+  archive_path: /archive.html
+  categories_path: /categories.html
+  tags_path: /tags.html
+  atom_path: /atom.xml
+  rss_path: /rss.xml
+  comments:
+    provider: disqus
+    disqus:
+      short_name: jekyllbootstrap
+    livefyre:
+      site_id: 123
+    intensedebate:
+      account: 123abc
+    facebook:
+      appid: 123
+      num_posts: 5
+      width: 580
+      colorscheme: light
+  analytics:
+    provider: google
+    google:
+      tracking_id: UA-***
+    googleUA:
+      tracking_id: UA-***
+      property_name: PROPERTY NAME
+    getclicky:
+      site_id: 
+    mixpanel:
+      token: _MIXPANEL_TOKEN_
+    piwik:
+      baseURL: myserver.tld/piwik
+      idsite: '1'
+  sharing:
+    provider: false

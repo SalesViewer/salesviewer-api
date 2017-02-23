@@ -1,0 +1,75 @@
+{
+    "title": "Company",
+    "description": "common company object",
+    "type": "object",
+    "properties": {
+        "id": {
+            "description": "ID of company",
+            "type": "string"
+        },
+        "street": {
+            "description": "Street of company",
+            "type": "string"
+        },
+        "zip": {
+            "description": "Zip of company",
+            "type": "string"
+        },
+        "name": {
+            "description": "Name of company",
+            "type": "string"
+        },
+        "phone": {
+            "description": "Phone of company",
+            "type": "string"
+        },
+        "email": {
+            "description": "E-Mail address of company",
+            "type": "string"
+        },
+        "city": {
+            "description": "City of company",
+            "type": "string"
+        },
+        "latitude": {
+            "description": "Geographical latitude of company's address",
+            "type": "number",
+            "format": "double"
+        },
+        "longitude": {
+            "description": "Geographical longitude of company's address",
+            "type": "number",
+            "format": "double"
+        },
+        "url": {
+            "description": "URL of company's website",
+            "type": "string"
+        },
+        "countyCode": {
+            "description": "Country code in (ISO 3166 Alpha 2) format (e.g. `DE`)",
+            "type": "string"
+        },
+        "countyCode3": {
+            "description": "Country code in (ISO 3166 Alpha 3) format (e.g. `DEU`)",
+            "type": "string"
+        },
+        "isCustomer": {
+            "description": "Indicates if company is marked as customer",
+            "type": "boolean"
+        },
+        "isFavorite": {
+            "description": "Indicates if company is marked as favorite",
+            "type": "boolean"
+        },
+        "isCompetitor": {
+            "description": "Indicates if company is marked as competitor",
+            "type": "boolean"
+        },
+        "sector": {
+            "$ref": "#\/definitions\/CompanySector"
+        }
+    },
+    "required": [
+        "id"
+    ]
+}

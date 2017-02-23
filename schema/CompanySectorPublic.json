@@ -1,0 +1,10 @@
+{
+    "title": "CompanySectorPublic",
+    "type": "object",
+    "description": "public company sector object",
+    "allOf": [
+        {
+            "$ref": "#\/definitions\/CompanySector"
+        }
+    ]
+}

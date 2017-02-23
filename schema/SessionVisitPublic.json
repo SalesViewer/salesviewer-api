@@ -1,0 +1,26 @@
+{
+    "title": "SessionVisitPublic",
+    "type": "object",
+    "description": "public session visit object",
+    "properties": {
+        "startedAt_ts_server": {
+            "description": "Session visit started at UNIX-Time",
+            "type": "string",
+            "format": "date-time"
+        },
+        "lastActivityAt_ts_server": {
+            "description": "Session visit last activity at UNIX-Time",
+            "type": "string",
+            "format": "date-time"
+        }
+    },
+    "required": [
+        "startedAt_ts_server",
+        "lastActivityAt_ts_server"
+    ],
+    "allOf": [
+        {
+            "$ref": "#\/definitions\/SessionVisit"
+        }
+    ]
+}
