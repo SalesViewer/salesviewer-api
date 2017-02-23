@@ -12,7 +12,7 @@
       window.SwaggerTranslator.translate();
     }
     var swaggerUi = new SwaggerUi({
-      url: 'swagger/salesviewer-api.swagger.json',
+      url: '../swagger/salesviewer-api.swagger.json',
       dom_id: $(this).attr('id'),
       booleanValues: [0,1],
       docExpansion: 'list', 
