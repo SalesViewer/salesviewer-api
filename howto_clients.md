@@ -1,6 +1,6 @@
 ---
 layout: default
-title: How-to
+title: "How-to"
 tagline: our little test tool
 group: navigation
 ---
