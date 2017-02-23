@@ -45,6 +45,7 @@ We had to enhance RQL a bit to support
 - [X] `null()` changed to `null` (_because of quoted strings_)
 - [X] `true()` changed to `true` (_because of quoted strings_)
 - [X] `false()` changed to `false` (_because of quoted strings_)
+- [ ] we want to provide a visual query builder (_work in progress_)
 
 ### Features ignored
 - [ ] `select (<list of attributes>)`[^1]
