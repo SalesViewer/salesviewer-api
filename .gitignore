@@ -1,18 +1,10 @@
 _site/*
 _theme_packages/*
-assets/images/*
+
 Thumbs.db
 .DS_Store
-*.log
+
 !.gitkeep
 
 .rbenv-version
 .rvmrc
-*.md
-
-
-*.sublime-workspace
-*.sublime-project
-_base_config.yml
-_config.yml
-

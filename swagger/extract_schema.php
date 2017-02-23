@@ -1,7 +1,7 @@
 <?php
 $schemadir = dirname(__FILE__) . '/../schema';
 
-$swaggerfile = 'salesviewer-api.swagger.min.json';
+$swaggerfile = 'salesviewer-api.swagger.json';
 
 
 $cnt = json_decode(file_get_contents($swaggerfile));
@@ -13,7 +13,7 @@ if(empty($cnt) || !isset($cnt->definitions)){
 function updateRefs(&$value){
   if(is_object($value)){
     foreach($value as $k => &$v){
-      updateRefs($&v);
+      updateRefs($v);
     }
     return;
   }
@@ -21,6 +21,14 @@ function updateRefs(&$value){
   
   $value = str_replace('#/definitions');
 }
+
+$full = [
+  'type' => 'object', 
+  'title' => 'SalesViewer',
+  'definitions' => $cnt->definitions
+];
+$json = json_encode($full, JSON_PRETTY_PRINT);
+file_put_contents(sprintf('%s/%s.json', $schemadir, 'salesviewer-api.schema'), $json);
 
 foreach($cnt->definitions as $modelName => $model){
   $file = sprintf('%s/%s.json', $schemadir, $modelName);
