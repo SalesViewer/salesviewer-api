@@ -12,4 +12,4 @@ _Note: To optain an an API-Key, please consult SalesViewer-Support via mail [inf
 
 in the meantime figure out with the help of our friends from swagger :sunglasses:
 
-**API-Endpoint-Base: https://www.salesviewer.com/api**
+**API-Endpoint-Base: https://api.salesviewer.com/**
