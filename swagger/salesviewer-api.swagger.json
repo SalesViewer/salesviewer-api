@@ -5,8 +5,8 @@
     "title":"SalesViewer API",
     "description":"SalesViewer API is a simple API allowing consumers to sessions and website interactions of their website."
   },
-  "host":"www.salesviewer.com",
-  "basePath":"/api",
+  "host":"api.salesviewer.com",
+  "basePath":"/",
   "securityDefinitions":{
     "apiKeyHeader":{
       "type":"apiKey",
